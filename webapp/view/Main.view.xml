@@ -1,0 +1,46 @@
+<mvc:View controllerName="custom.pdfZPDF.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<Page title="PDF Download">
+			<content>
+				<Table id="idPDFTable" items="{/ProductCategories}">
+					<headerToolbar>
+						<Toolbar>
+							<Title level="H2" text="PDF Table"/>
+							<ToolbarSpacer></ToolbarSpacer>
+							<Button icon="sap-icon://download" press="onDataExportPDF"/>
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column width="12em">
+							<Text text="Category"/>
+						</Column>
+						<Column>
+							<Text text="CategoryName"/>
+						</Column>
+						<Column>
+							<Text text="MainCategory"/>
+						</Column>
+						<Column>
+							<Text text="MainCategoryName"/>
+						</Column>
+						<Column>
+							<Text text="NumberOfProducts"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Text text="{Category}"/>
+								<Text text="{CategoryName}"/>
+								<Text text="{MainCategory}"/>
+								<Text text="{MainCategoryName}"/>
+								<Text text="{NumberOfProducts}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</content>
+		</Page>
+	</App>
+</mvc:View>
